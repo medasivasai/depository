@@ -1,8 +1,15 @@
-import React from 'react'
+import './App.css';
+import {Navbar, Hero} from './components';
 
-const App = () => {
+
+const App = () =>{
   return (
-    <div>App</div>
+    <>
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
+    </>
   )
 }
 
