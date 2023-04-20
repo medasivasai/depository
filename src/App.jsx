@@ -1,5 +1,5 @@
 import './App.css';
-import {Navbar, Hero} from './components';
+import {Navbar, Hero, About, Projects, Contact, Footer} from './components';
 
 
 const App = () =>{
@@ -8,6 +8,10 @@ const App = () =>{
       <div>
         <Navbar />
         <Hero />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </>
   )
