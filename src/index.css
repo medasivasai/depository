@@ -16,7 +16,7 @@
 }
 
 :root {
-  font-family: MonumentBold, MonumentLight, MonumentRegular;
+  font-family: MonumentBold;
   line-height: 1.5;
 
   /* color-scheme: light dark;
@@ -29,4 +29,5 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 
