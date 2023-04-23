@@ -1,8 +1,8 @@
 
 const Footer = () => {
   return (
-    <section className="mt-[64px] ">
-      <div className="w-full bg-teal-500 md:h-[180px] h-[480px] flex md:flex-row flex-col items-center md:justify-between justify-around">
+    <section className="mt-[64px]">
+      <div className="w-full bg-teal-500 md:h-[180px] h-[480px] flex md:flex-row flex-col items-center md:justify-between justify-around m-0 p-0">
         <div className="md:px-8 text-white md:text-[24px] text-[20px]">
           <ul className="flex md:flex-row flex-col items-center flex-wrap md:justify-evenly justify-around py-8">
             <li className="px-4 py-3 hover:underline">
