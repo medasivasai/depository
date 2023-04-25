@@ -7,7 +7,7 @@ const App = () =>{
   return (
     <>
       <div className='bg'/>
-      <div id='butter' className='md:px-[96px] px-[18px] md:py-[48px] py-[28px]'>
+      <div id='butter' className='md:px-[96px] px-[18px] py-[18px] '>
         <Navbar />
         <Hero />
         <About />

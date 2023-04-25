@@ -1,22 +1,33 @@
 import '../App.css';
+import { motion } from 'framer-motion';
+import { staggerContainer, textVariant } from '../utils/motion';
 
 
 const About = () => {
   return (
-    <section id="about" className="mt-[350px] text-left">
-        <h1 
-          className="md:text-[150px] text-[48px] md:mr-[240px] text-right"
+    <section id="about" className="mt-[64px] text-left">
+      <motion.div
+        variants={staggerContainer} initial='hidden' whileInView='show' viewport={{once: false,amount:0.25}}
         >
+        <motion.h1 
+          variants={textVariant(0.1)}
+          className="md:text-[150px] text-[48px] md:mr-[240px] text-right z-[0]"
+          >
           about_<br />me<span className="text-teal-500">:</span>
-        </h1>
-        <p className="max-w-[1080px] md:mt-[80px] md:ml-[250px] md:text-[28px]  mt-[20px] ">&nbsp; &nbsp; A skilled software developer with expertise in frameworks like React, Node.js and Three.js. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable and user-friendly solutions that solve real world problems. Let&apos;s work together to bring your ideas to life!
-        <br />
-        <br/>
+        </motion.h1>
+      </motion.div>
+      <motion.div variants={staggerContainer} initial='hidden' whileInView='show' viewport={{once: false,amount:0.25}}>
+        <motion.p variants={textVariant(0.2)} className=" max-w-[1080px] md:mt-[80px] md:ml-[250px] md:text-[28px]  mt-[20px] ">&nbsp; &nbsp; A skilled software developer with expertise in frameworks like React, Node.js and Three.js. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable and user-friendly solutions that solve real world problems. Let&apos;s work together to bring your ideas to life! <br /> <br />
+        </motion.p>
+      </motion.div>
+      <motion.div variants={staggerContainer} initial='hidden' whileInView='show' viewport={{once: false,amount:0.25}}>
+        <motion.p variants={textVariant(0.3)}  className=" mb-[128,px] max-w-[1080px] md:ml-[250px] md:text-[28px]">
         &nbsp; &nbsp;I do UI/UX design, Motion design, Frontend Development for Web Applications and Mobile Applications.
-        </p>
-
-        <div className="div-axis md:w-[350px] md:h-[350px] w-[100px] h-[100px] mt-[20px]">
-          <svg className='rotate' width="180" height="180" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </motion.p>
+      </motion.div>
+{/* 
+        <div className='div-axis max-w-[200px] float-right -mt-[10px]'>
+          <svg className='rotate  m-0 p-0' width="200" height="200" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M473.732 251.912L444.889 259.912L431.461 211.537L409.602 217.605L423.029 265.985L394.279 273.964L399.394 292.381L478.842 270.329L473.732 251.912Z" fill="black"/>
             <path d="M326.338 257.55C305.62 272.399 299.13 292.013 310.099 307.32C321.068 322.622 341.677 322.701 362.396 307.852C383.109 292.997 389.656 273.461 378.687 258.159C367.719 242.857 347.057 242.695 326.338 257.55ZM360.484 271.206C365.265 277.878 362 286.747 352.271 293.727C342.536 300.701 333.088 300.94 328.307 294.268C323.469 287.518 326.734 278.649 336.463 271.675C346.193 264.695 355.646 264.456 360.484 271.206Z" fill="black"/>
             <path d="M253.811 331.814C239.457 352.876 240.108 373.532 255.665 384.137C271.222 394.736 290.603 387.73 304.957 366.663C319.311 345.6 318.743 325.001 303.186 314.397C287.623 303.798 268.165 310.751 253.811 331.814ZM290.571 332.907C297.353 337.532 297.337 346.986 290.597 356.876C283.853 366.772 275.061 370.246 268.28 365.621C261.415 360.949 261.431 351.496 268.176 341.6C274.915 331.704 283.707 328.236 290.571 332.907Z" fill="black"/>
@@ -36,9 +47,8 @@ const About = () => {
             <path d="M669.127 254.881C650.784 242.027 635.799 236.834 626.435 250.199C618.346 261.741 626.742 270.454 643.773 284.512L648.398 288.34C657.232 295.59 658.81 297.876 657.206 300.168C655.711 302.303 651.685 301.486 643.461 295.725C635.075 289.85 632.627 285.777 634.763 282.558L615.627 269.152C608.273 281.329 618.039 294.652 635.195 306.678C652.278 318.642 668.211 324.506 676.799 312.246C684.112 301.808 676.831 293.527 659.221 278.949L655.331 275.751C646.081 268.09 643.867 265.361 645.862 262.512C647.747 259.824 651.195 260.121 661.081 267.043C672.148 274.803 673.398 278.741 671.013 282.142L690.153 295.548C699.096 282.954 689.846 269.397 669.127 254.881Z" fill="black"/>
             <path d="M579.497 212.784C555.617 206.044 541.388 210.003 532.914 223.18L553.934 229.024C557.33 225.461 565.19 224.94 574.028 227.399C585.007 230.451 591.169 235.675 591.013 243.445L531.388 226.862C525.174 249.185 536.96 265.19 563.007 272.435C587.747 279.32 606.861 272.211 611.96 253.883C617.101 235.768 604.424 219.722 579.497 212.784ZM587.674 253.643C583.643 259.133 576.471 260.05 566.335 257.227C557.033 254.638 551.497 250.393 550.747 243.373L587.674 253.643Z" fill="black"/>
           </svg>
-        </div>
-
-        <div></div>
+        </div> */}
+        
     </section>
   )
 }
