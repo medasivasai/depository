@@ -17,7 +17,7 @@ const Hero = () => {
           variants={textVariant(0.6)} 
           className='mt-8 mb-[64px] border-2 border-black  px-[28px] py-[20px]  hover:bg-teal-500  md:text-[32px] text-[26px] hero-btn text-[28px]'
         >
-          <a href="https://drive.google.com/file/d/1Mj5VAI5I92brv34YFP-hxKP-y6-s0MMj/view?usp=sharing" target='_blank' rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1NB_3GTnCEgviPL2lv5yJFm9j2TJ5VcII/view?usp=sharing" target='_blank' rel="noreferrer">
           Resume
           </a>
         </motion.button>
