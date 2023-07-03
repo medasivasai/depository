@@ -41,7 +41,7 @@ const Contact = () => {
       </motion.div>
       <motion.div  variants={staggerContainer} initial='hidden' whileInView='show' viewport={{once: false,amount:0.25}}>
         <motion.h1 variants={textVariant(0.8)}>
-          <a href="#" className="group transition-all duration-300 ease-in-out text-teal-500">
+          <a href="mailto:medasivasai29@gmail.com" className="group transition-all duration-300 ease-in-out text-teal-500">
             <span className='bg-left-bottom bg-gradient-to-r from-teal-500 to-teal-500 bg-[length:0%_12px] bg-no-repeat group-hover:bg-[length:100%_12px] transition-all duration-500 ease-out hover:text-teal-500'>
               Lets talk.
             </span>
